@@ -9,3 +9,12 @@
         </li>
     {/each}
 </ul>
+<button><a href="/">HOME PAGE</a></button>
+
+
+<style>
+    ul {
+        background-color: aqua;
+        font-size: 40px;
+    }
+</style>
