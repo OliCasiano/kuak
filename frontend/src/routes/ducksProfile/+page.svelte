@@ -1,12 +1,12 @@
-
 <script>
-  import {duckStore} from '../../duck-store';
-
-  let handleClick = () =>
-    duckStore.update(prev => {
-      let newDuck = {id: 5, name: "Drive", age: "24"};
-      return [...prev, newDuck];
-    })
+  import { duckStore } from "../../duck-store";
+  import { onMount } from "svelte";
+  onMount(async function () {
+    const endpoint = "http://localhost:8000/api/ducks/";
+    const response = await fetch(endpoint);
+    const data = await response.json();
+    console.log(data);
+  });
 </script>
 
 <div>
@@ -30,7 +30,9 @@
               <p class="card-text">Edad: {duck.age}</p>
             </div>
             <div>
-              <a href="/ducksProfile/{duck.id}" class="btn btn-primary">Ver Perfil</a>
+              <a href="/ducksProfile/{duck.id}" class="btn btn-primary"
+                >Ver Perfil</a
+              >
             </div>
           </div>
         </div>
