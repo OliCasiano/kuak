@@ -16,7 +16,8 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=128)),
-                ('age', models.TextField()),
+                ('age', models.CharField(max_length=3)),
+                ('location', models.CharField(max_length=64)),
                 ('image', models.ImageField(upload_to='images/')),
             ],
         ),
