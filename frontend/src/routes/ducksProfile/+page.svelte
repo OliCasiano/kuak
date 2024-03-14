@@ -1,11 +1,14 @@
 <script>
   import { duckStore } from "../../duck-store";
   import { onMount } from "svelte";
+
   onMount(async function () {
-    const endpoint = "http://localhost:8000/api/ducks/";
-    const response = await fetch(endpoint);
-    const data = await response.json();
-    console.log(data);
+    if (!$duckStore.lenght) {
+      const endpoint = "http://localhost:8000/api/ducks/"
+      const response = await fetch(endpoint)
+      const data = await response.json()
+      duckStore.set(data)
+    }
   });
 </script>
 

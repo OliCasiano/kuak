@@ -4,16 +4,34 @@
 
   let name = "";
   let age = "";
+  let location = "";
+  let files;
+  let showInvalidMessage = false;
+
+  let validFields = () => {
+    return name.length > 4 && age.length > 4 && location.length > 10;
+  };
 
   let handleSubmit = () => {
-    duckStore.update(prev => {
-      let id = prev[prev.length - 1].id + 1
-      let newDuck = { id: id, name: name, age: age }
-      return [...prev, newDuck]
-    })
+    if (!validFields()) {
+      showInvalidMessage = true;
+      return;
+    }
+    const endpoint = "http://localhost:8000/api/duckProfile/";
+    let data = new FormData();
+    data.append("name", name);
+    data.append("age", age);
+    data.append("location", location);
+    data.append("image", files[0]);
 
-    goto("/ducksProfile/")
-  }
+    fetch(endpoint, { method: "POST", body: data })
+      .then((response) => response.json())
+      .then((data) => {
+        duckStore.update((prev) => [...prev, data]);
+      });
+
+    goto("/ducksProfile/");
+  };
 </script>
 
 <div>
@@ -37,7 +55,18 @@
           bind:value={age}
         />
       </div>
-
+      <div class="mb-3">
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Location"
+          bind:value={location}
+        />
+      </div>
+      <div class="mb-3">
+        <input class="form-control" type="file" bind:files />
+      </div>
+      
       <button class="btn btn-primary" type="submit">Submit</button>
     </form>
   </div>
