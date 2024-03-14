@@ -1,9 +1,10 @@
+
 <script>
   import {duckStore} from '../../duck-store';
 
   let handleClick = () =>
     duckStore.update(prev => {
-      let newDuck = {id: 5, name: "Drive", age: "24", location: "Gijon" };
+      let newDuck = {id: 5, name: "Drive", age: "24"};
       return [...prev, newDuck];
     })
 </script>

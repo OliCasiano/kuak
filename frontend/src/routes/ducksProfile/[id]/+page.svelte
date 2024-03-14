@@ -9,7 +9,7 @@
 
 <div>
   {#if duck}
-    <p>{duck.name}, Tiene {duck.age} años y es de {duck.location}</p>
+    <p>{duck.name},{duck.age} años</p>
   {:else}
     <p>Not found Id:{data.id}</p>
   {/if}
