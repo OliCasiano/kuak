@@ -4,17 +4,16 @@
 
   let name = "";
   let age = "";
-  let location = "";
 
   let handleSubmit = () => {
-    duckStore.update((prev) => {
-      let id = prev[prev.length - 1].id + 1;
-      let newDuck = { id: id, name: name, age: age, location: location };
-      return [...prev, newDuck];
-    });
+    duckStore.update(prev => {
+      let id = prev[prev.length - 1].id + 1
+      let newDuck = { id: id, name: name, age: age }
+      return [...prev, newDuck]
+    })
 
-    goto("/duckProfile/");
-  };
+    goto("/ducksProfile/")
+  }
 </script>
 
 <div>
@@ -36,15 +35,6 @@
           type="text"
           placeholder="Age"
           bind:value={age}
-        />
-      </div>
-
-      <div class="mb-3">
-        <input
-          class="form-control"
-          type="text"
-          placeholder="Location"
-          bind:value={location}
         />
       </div>
 

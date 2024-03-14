@@ -1,11 +1,11 @@
 <script>
-  import { duckStore } from "../../duck-store";
+  import {duckStore} from '../../duck-store';
 
   let handleClick = () =>
-    duckStore.update((prev) => {
-      let newDuck = { id: 5, name: "Drive", age: "24", location: "Gijon" };
+    duckStore.update(prev => {
+      let newDuck = {id: 5, name: "Drive", age: "24", location: "Gijon" };
       return [...prev, newDuck];
-    });
+    })
 </script>
 
 <div>

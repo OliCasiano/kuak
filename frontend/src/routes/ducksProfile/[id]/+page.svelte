@@ -1,9 +1,9 @@
 <script>
-  import { duckStore } from "../../../duck-store";
+  import {duckStore} from "../../../duck-store";
 
   export let data;
 
-  let duck = $duckStore.find((duck) => duck.id == data.id);
+  let duck = $duckStore.find(duck => duck.id == data.id);
   console.log(duck);
 </script>
 
@@ -14,5 +14,5 @@
     <p>Not found Id:{data.id}</p>
   {/if}
 </div>
-<button><a href="/ducksProfile">Volver a la Pagina Principal</a></button>
+
 
