@@ -4,12 +4,21 @@
 
   onMount(async function () {
     if (!$duckStore.lenght) {
-      const endpoint = "http://localhost:8000/api/ducks/"
-      const response = await fetch(endpoint)
-      const data = await response.json()
-      duckStore.set(data)
+      const endpoint = "http://localhost:8000/api/ducks/";
+      const response = await fetch(endpoint);
+      const data = await response.json();
+      duckStore.set(data);
     }
   });
+
+  let handleDelete = (id) => {
+    const endpoint = `http://localhost:8000/api/ducks/${id}`;
+    fetch(endpoint, { method: "DELETE" }).then(response => {
+      if (response.status == 204) {
+        duckStore.update(prev => prev.filter(duck => duck.id != id));
+      }
+    });
+  };
 </script>
 
 <div>
@@ -22,7 +31,7 @@
           <img
             class="card-img-top"
             style="height: 300px; object-fit: cover"
-            src=""
+            src={duck.image}
             alt="Duck"
           />
           <div
@@ -35,6 +44,12 @@
             <div>
               <a href="/ducksProfile/{duck.id}" class="btn btn-primary"
                 >Ver Perfil</a
+              >
+              <button
+                on:click={() => handleDelete(duck.id)}
+                class="btn btn-danger m1-2"
+              >
+                Delete</button
               >
             </div>
           </div>
