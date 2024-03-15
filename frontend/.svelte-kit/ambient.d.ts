@@ -26,6 +26,7 @@
  * ```
  */
 declare module '$env/static/private' {
+<<<<<<< HEAD
 	export const ALLUSERSPROFILE: string;
 	export const APPDATA: string;
 	export const CHROME_CRASHPAD_PIPE_NAME: string;
@@ -109,6 +110,67 @@ declare module '$env/static/private' {
 	export const VSCODE_INJECTION: string;
 	export const VSCODE_NONCE: string;
 	export const windir: string;
+=======
+	export const TERM_PROGRAM: string;
+	export const NODE: string;
+	export const INIT_CWD: string;
+	export const SHELL: string;
+	export const TERM: string;
+	export const TMPDIR: string;
+	export const npm_config_global_prefix: string;
+	export const TERM_PROGRAM_VERSION: string;
+	export const MallocNanoZone: string;
+	export const ORIGINAL_XDG_CURRENT_DESKTOP: string;
+	export const COLOR: string;
+	export const npm_config_noproxy: string;
+	export const SDKMAN_PLATFORM: string;
+	export const npm_config_local_prefix: string;
+	export const USER: string;
+	export const COMMAND_MODE: string;
+	export const npm_config_globalconfig: string;
+	export const SDKMAN_CANDIDATES_API: string;
+	export const SSH_AUTH_SOCK: string;
+	export const __CF_USER_TEXT_ENCODING: string;
+	export const npm_execpath: string;
+	export const PATH: string;
+	export const npm_package_json: string;
+	export const npm_config_engine_strict: string;
+	export const _: string;
+	export const LaunchInstanceID: string;
+	export const npm_config_userconfig: string;
+	export const npm_config_init_module: string;
+	export const __CFBundleIdentifier: string;
+	export const npm_command: string;
+	export const PWD: string;
+	export const JAVA_HOME: string;
+	export const npm_lifecycle_event: string;
+	export const EDITOR: string;
+	export const npm_package_name: string;
+	export const LANG: string;
+	export const npm_config_npm_version: string;
+	export const XPC_FLAGS: string;
+	export const VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
+	export const npm_config_node_gyp: string;
+	export const npm_package_version: string;
+	export const XPC_SERVICE_NAME: string;
+	export const HOME: string;
+	export const SHLVL: string;
+	export const VSCODE_GIT_ASKPASS_MAIN: string;
+	export const npm_config_cache: string;
+	export const LOGNAME: string;
+	export const npm_lifecycle_script: string;
+	export const SDKMAN_DIR: string;
+	export const VSCODE_GIT_IPC_HANDLE: string;
+	export const npm_config_user_agent: string;
+	export const SDKMAN_CANDIDATES_DIR: string;
+	export const GIT_ASKPASS: string;
+	export const VSCODE_GIT_ASKPASS_NODE: string;
+	export const SECURITYSESSIONID: string;
+	export const npm_node_execpath: string;
+	export const npm_config_prefix: string;
+	export const COLORTERM: string;
+	export const NODE_ENV: string;
+>>>>>>> cf6c20cd02d4bb94b65ed1581cfe0625378b649d
 }
 
 /**
@@ -140,6 +202,7 @@ declare module '$env/static/public' {
  */
 declare module '$env/dynamic/private' {
 	export const env: {
+<<<<<<< HEAD
 		ALLUSERSPROFILE: string;
 		APPDATA: string;
 		CHROME_CRASHPAD_PIPE_NAME: string;
@@ -223,6 +286,67 @@ declare module '$env/dynamic/private' {
 		VSCODE_INJECTION: string;
 		VSCODE_NONCE: string;
 		windir: string;
+=======
+		TERM_PROGRAM: string;
+		NODE: string;
+		INIT_CWD: string;
+		SHELL: string;
+		TERM: string;
+		TMPDIR: string;
+		npm_config_global_prefix: string;
+		TERM_PROGRAM_VERSION: string;
+		MallocNanoZone: string;
+		ORIGINAL_XDG_CURRENT_DESKTOP: string;
+		COLOR: string;
+		npm_config_noproxy: string;
+		SDKMAN_PLATFORM: string;
+		npm_config_local_prefix: string;
+		USER: string;
+		COMMAND_MODE: string;
+		npm_config_globalconfig: string;
+		SDKMAN_CANDIDATES_API: string;
+		SSH_AUTH_SOCK: string;
+		__CF_USER_TEXT_ENCODING: string;
+		npm_execpath: string;
+		PATH: string;
+		npm_package_json: string;
+		npm_config_engine_strict: string;
+		_: string;
+		LaunchInstanceID: string;
+		npm_config_userconfig: string;
+		npm_config_init_module: string;
+		__CFBundleIdentifier: string;
+		npm_command: string;
+		PWD: string;
+		JAVA_HOME: string;
+		npm_lifecycle_event: string;
+		EDITOR: string;
+		npm_package_name: string;
+		LANG: string;
+		npm_config_npm_version: string;
+		XPC_FLAGS: string;
+		VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
+		npm_config_node_gyp: string;
+		npm_package_version: string;
+		XPC_SERVICE_NAME: string;
+		HOME: string;
+		SHLVL: string;
+		VSCODE_GIT_ASKPASS_MAIN: string;
+		npm_config_cache: string;
+		LOGNAME: string;
+		npm_lifecycle_script: string;
+		SDKMAN_DIR: string;
+		VSCODE_GIT_IPC_HANDLE: string;
+		npm_config_user_agent: string;
+		SDKMAN_CANDIDATES_DIR: string;
+		GIT_ASKPASS: string;
+		VSCODE_GIT_ASKPASS_NODE: string;
+		SECURITYSESSIONID: string;
+		npm_node_execpath: string;
+		npm_config_prefix: string;
+		COLORTERM: string;
+		NODE_ENV: string;
+>>>>>>> cf6c20cd02d4bb94b65ed1581cfe0625378b649d
 		[key: `PUBLIC_${string}`]: undefined;
 		[key: `${string}`]: string | undefined;
 	}
