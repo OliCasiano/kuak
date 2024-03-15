@@ -1,3 +1,3 @@
-import * as universal from "../../../../src/routes/ducksProfile/[id]/+page.js";
+import * as universal from "../../../../src/routes/ducksProfile/chat/+page.js";
 export { universal };
-export { default as component } from "../../../../src/routes/ducksProfile/[id]/+page.svelte";
+export { default as component } from "../../../../src/routes/ducksProfile/chat/+page.svelte";

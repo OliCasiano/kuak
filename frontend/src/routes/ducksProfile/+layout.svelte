@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="/ducksProfile/">Muack - Kuack</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -28,3 +28,9 @@
 <div class="container">
   <slot />
 </div>
+
+<style>
+    .navbar {
+    background-image: linear-gradient(to right, rgb(242, 237, 99), #ff9900) !important;
+  }
+</style>
